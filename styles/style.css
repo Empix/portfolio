@@ -1,0 +1,269 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* Variables */
+:root {
+  --background: #171e25;
+  --primary: #4395d9;
+  --primary-hover: #419eeb;
+  --secondary: #ffffff;
+  --secondary-hover: #ebebeb;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--background);
+  font-family: 'Montserrat', sans-serif;
+  overflow: overlay;
+  scroll-behavior: smooth;
+}
+
+/* Scrollbar */
+body::-webkit-scrollbar {
+  width: 0.4em;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  border-radius: 10px;
+}
+
+/* Container */
+.container {
+  width: 100%;
+}
+
+/* Main */
+.main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  scroll-behavior: smooth;
+}
+
+.main h1 {
+  color: var(--primary);
+  font-size: 4rem;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  margin-bottom: 10px;
+}
+
+.main ul {
+  list-style: none;
+}
+
+.main ul li {
+  display: inline;
+  margin-right: 25px;
+}
+
+.main ul li:last-child {
+  margin-right: 0;
+}
+
+.main ul li a {
+  color: var(--secondary);
+  text-decoration: none;
+}
+
+.main ul li a ion-icon {
+  font-size: 1.8em;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.main ul li a ion-icon:hover {
+  transform: scale(1.6);
+}
+
+.main button {
+  background-color: var(--primary);
+  font-size: 1.2rem;
+  border: 0;
+  border-radius: 50px;
+  max-width: 300px;
+  width: 100%;
+  padding: 10px;
+  color: var(--secondary);
+  font-weight: 500;
+  margin-top: 100px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.main button:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Portfolio */
+.portfolio {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.portfolio .title {
+  color: var(--secondary);
+  margin-bottom: 50px;
+  margin-top: 30px;
+  font-size: 3rem;
+}
+
+.portfolio .projects {
+  width: 100%;
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-rows: repeat(
+    auto-fit,
+    minmax(0px, max-content)
+  ); /* Firefox fix for stretch */
+  gap: 40px;
+  margin-bottom: 50px;
+  flex-grow: 1;
+  padding: 0 20px;
+  justify-items: center;
+}
+
+.portfolio .projects .project {
+  position: relative;
+  background-color: var(--background);
+  padding: 20px;
+  border-radius: 20px;
+  color: var(--secondary);
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.portfolio .projects .project:hover {
+  transform: scale(1.05);
+  -webkit-box-shadow: 0px 0px 24px 1px rgba(0, 0, 0, 0.42);
+  box-shadow: 0px 0px 24px 1px rgba(0, 0, 0, 0.42);
+}
+
+.portfolio .projects .project .wip {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--secondary);
+  border-radius: 0 20px;
+  padding: 10px;
+  color: var(--background);
+  font-weight: 600;
+}
+
+.portfolio .projects .project .header {
+  margin-bottom: 10px;
+}
+
+.portfolio .projects .project .header * {
+  display: inline;
+}
+
+.portfolio .projects .project .header .title {
+  font-size: 2rem;
+}
+
+.portfolio .projects .project .header .type {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--secondary-hover);
+  white-space: nowrap;
+}
+
+.portfolio .projects .project .tags {
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.portfolio .projects .project .tags .tag {
+  display: inline;
+  background-color: var(--secondary);
+  border-radius: 50px;
+  color: var(--secondary);
+  padding: 5px 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.portfolio .projects .project .description {
+  margin-bottom: 15px;
+  flex-grow: 1;
+  color: var(--secondary-hover);
+}
+
+.portfolio .projects .project a {
+  width: 100%;
+  padding: 10px;
+  border-radius: 50px;
+  background-color: var(--secondary);
+  color: var(--background);
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.portfolio .projects .project a:hover {
+  background-color: var(--secondary-hover);
+}
+
+.portfolio .projects .project ion-icon {
+  font-size: 1.6rem;
+  margin-left: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: var(--background);
+  width: 100%;
+  color: var(--secondary);
+  text-align: center;
+  padding: 20px;
+}
+
+footer a {
+  color: var(--secondary);
+}
+
+/* Responsive */
+@media (max-width: 425px) {
+  /* Portfolio */
+  .portfolio .title {
+    color: var(--secondary);
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+  }
+
+  .portfolio .projects {
+    grid-template-columns: 1fr;
+  }
+}
