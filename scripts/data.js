@@ -65,7 +65,7 @@ const projects = [
     type: 'back-end',
     tags: [tags['node.js'], tags['express'], tags['mysql']],
     description:
-      'O objetivo deste projeto é fazer uma API utilizando apenas o driver mysql2 para aplicar meus conhecimentos em SQL.',
+      'O objetivo deste projeto é fazer uma API utilizando apenas o driver mysql2 para aplicar meus conhecimentos de SQL.',
     url: 'https://github.com/empix/pizzeria-backend',
     wip: false,
   },
