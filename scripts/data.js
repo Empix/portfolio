@@ -49,7 +49,7 @@ const projects = [
     description:
       'Uma API de "cartões" de notícias com upload de imagem. O objetivo principal é estudar e aplicar o que eu já aprendi.',
     url: 'https://github.com/empix/newscards-backend',
-    wip: true,
+    wip: false,
   },
   {
     name: 'NewsCards',
@@ -58,7 +58,7 @@ const projects = [
     description:
       'Uma interface web para consumir a API que fiz e aproveitar para estudar React.js',
     url: 'https://github.com/empix/newscards-frontend',
-    wip: true,
+    wip: false,
   },
   {
     name: 'Pizzeria',
